@@ -1,0 +1,31 @@
+{
+  "id": 3149451,
+  "name": "Branch Create Rules",
+  "target": "branch",
+  "source_type": "Repository",
+  "source": "TheGoatedDev/Github-Rulesets",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [
+        "refs/heads/feature/DEV-*-*",
+        "refs/heads/main",
+        "refs/heads/develop",
+        "refs/heads/development"
+      ],
+      "include": []
+    }
+  },
+  "rules": [
+    {
+      "type": "creation"
+    }
+  ],
+  "bypass_actors": [
+    {
+      "actor_id": 1,
+      "actor_type": "OrganizationAdmin",
+      "bypass_mode": "pull_request"
+    }
+  ]
+}
